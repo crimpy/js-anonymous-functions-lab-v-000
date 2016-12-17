@@ -16,21 +16,31 @@ function randomNumber() {
 
 function menu() {
   $('#menu').on('click', function(e) {
-    $('#menuOptions').html("You can play a song, pause a song, or view all the songs");
-  });
+    menuOptions();
+      });
+}
+
+function menuOptions(){
+  $('#menuOptions').html("You can play a song, pause a song, or view all the songs");
 }
 
 function play() {
   $('#play').on('click', function(e) {
-    $('#songPlaying').html("now playing " + songToPlay + " by " + theArtist);
-    return "now playing " + songToPlay + " by " + theArtist;
+    songPlaying();
   });
+}
+function songPlaying(){
+  $('#songPlaying').html("now playing " + songToPlay + " by " + theArtist);
+  return "now playing " + songToPlay + " by " + theArtist;
 }
 
 function pause() {
   $('#pause').on('click', function(e) {
-    $('#songPaused').html(songToPlay + " is paused");
+    songPaused();
   });
+}
+function songPaused(){
+  $('#songPaused').html(songToPlay + " is paused");
 }
 
 function show() {
